@@ -1,54 +1,36 @@
-# Pixi.js Project #
+# HTML5 Slot Machine
 
-A generic frontend **Pixi.js** project boiler plate in **TypeScript** using **Webpack**.
+![Build and Deploy Status](https://github.com/johakr/html5-slot-machine/actions/workflows/deploy.yml/badge.svg) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-Main features:
+This is a modern proof of concept casino slot machine game, built using only vanilla HTML, CSS and JavaScript.
+No Flash or Frameworks required. Allowing for an amazing low bundle size and blazing fast performance.
 
-* Source Map support
-* Incremental Build
-* Unit tests
-* Browser Hot Reload
+Built using the _Web Animations API_.
 
+**[Live Demo](https://johakr.github.io/html5-slot-machine/)**
 
-Main dependencies:
+## Features
 
-* **Application Server**: [Node](https://nodejs.org/en/)
-* **Compiler**: [TypeScript](https://github.com/Microsoft/TypeScript)
-* **Bundler**: [Webpack](https://github.com/webpack/webpack)
-* **Unit Test Runner**: [Mocha](https://github.com/mochajs/mocha)
-* **Pixi.js**: [Pixi.js](http://www.pixijs.com/)
+- Fully responsive for great UX on mobile, web & fullscreen mode.
+- Autoplay functionality, which keeps running even if the game window is in background.
 
+## Installation, Build & Deployment
 
-## Installation ##
+1. Clone repository
+2. Run `npm install`
+   - _Development_: run `npm start` and go to `http://localhost:8080`
+   - _Production_: run `npm run build` and serve from `/dist`
 
-Node, TypeScript and TSLint should be installed globally.
+## Configuration
 
-	$> git clone https://github.com/yahiko00/PixiProject.git <new folder>
-	$> cd <new folder>
-	$> git init
-	$> npm install
+For configuration options see `config` object in [index.js](https://github.com/johakr/html5-slot-machine/blob/master/src/js/index.js)
 
+| Property      | Description                                                                                                                            | Default   |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| `inverted`    | Controls visual spinning direction of reels. If false, reels will spin from bottom to top. If true, reels will spin from top to bottom | false     |
+| `onSpinStart` | Callback function invoked when spin starts with symbols pattern array `(symbols) => void`.                                             | undefined |
+| `onSpinEnd`   | Callback function invoked when spin ends with symbols pattern array `(symbols) => void`.                                               | undefined |
 
-## Build ##
+## Credits
 
-Commands should be run under a **bash** shell.
-
-The following command builds and run the project in development mode with Hot Reload.
-
-	$> npm run serve
-
-The following command builds the project in production mode.
-
-	$> npm run build
-
-
-For more predefined commands, see `package.json`, item `scripts`.
-
-## Contributors ##
-
-yahiko
-
-
-## Licence ##
-
-MIT
+Icons are created by [KPD Media](https://dribbble.com/shots/3517520-Star-Wars) and can be used for private and commercial purposes with no attribution required ([check license here](https://iconstore.co/icons/10-star-wars-icons/)).
